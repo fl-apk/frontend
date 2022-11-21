@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ImageInput from "../components/ImageInput";
 import { Button } from "@mui/material";
 import { Box } from "@mui/material";
+import ImageInfer from "../components/ImageInfer";
 
 const Home = () => {
 
@@ -26,10 +27,15 @@ const Home = () => {
                 </Button>
             </label>
             {imageUrl && image && (
-                <Box mt={2} textAlign="center">
-                    <h2>Image Preview</h2>
-                    <img src={imageUrl} alt={image.name} height="300px" />
-                </Box>
+                <>
+                    <Box mt={2} textAlign="center">
+                        <h2>Image Preview</h2>
+                        <img src={imageUrl} alt={image.name} height="300px" width="600px" />
+                    </Box>
+                    <ImageInfer
+                        image={image}
+                    />
+                </>
             )}
         </div>
     );
