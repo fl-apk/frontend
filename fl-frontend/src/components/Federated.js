@@ -18,7 +18,7 @@ class Federated extends Component {
         console.log(this.props.folder);
 
         const form = new FormData()
-        form.append("folder_path", this.props.folder)
+        form.append("folder", this.props.folder)
 
         const ack = await axios({
             method: "post",
@@ -34,7 +34,7 @@ class Federated extends Component {
             <div className="imageinput">
                 <input type="text" onChange={e => this.state.setFolder(e.target.value)} />
                 <Button className="Button" color="secondary" component="span" onClick={this.sendFolderPath}>
-                    Upload Folder
+                    Ready For FL
                 </Button>
             </div>
         )
