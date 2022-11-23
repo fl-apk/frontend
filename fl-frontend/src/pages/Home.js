@@ -22,7 +22,7 @@ const Home = () => {
                 setImage={setImage}
             />
             <label htmlFor="select-image">
-                <Button className="Button" color="secondary" component="span">
+                <Button className="Button" component="span">
                     Upload Image
                 </Button>
             </label>
@@ -34,6 +34,7 @@ const Home = () => {
                     </Box>
                     <ImageInfer
                         image={image}
+                        setImage={setImage}
                     />
                 </>
             )}

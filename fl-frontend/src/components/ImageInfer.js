@@ -1,6 +1,7 @@
 import { useState, useEffect, Component } from "react";
 import axios from "axios";
 import FormData from "form-data";
+import { FcCheckmark, FcCancel, FcSynchronize } from "react-icons/fc";
 
 class ImageInfer extends Component {
 
@@ -38,9 +39,17 @@ class ImageInfer extends Component {
     render() {
         return (
             <div className="imageinfer">
-                {console.log(this.state.data)}
-                {this.state.data && this.state.data === 1 && <h1>YES</h1>}
-                {this.state.data && this.state.data === 0 && <h1>NO</h1>}
+                {this.state.data === 1 ?
+                    <>
+                        <h1><FcCheckmark /></h1>
+                        <h2><FcSynchronize onClick={(e) => this.props.setImage(null)} /></h2>
+                    </>
+                    :
+                    <>
+                        <h1><FcCancel /></h1>
+                        <h2><FcSynchronize onClick={(e) => this.props.setImage(null)} /></h2>
+                    </>
+                }
             </div>
         )
     }

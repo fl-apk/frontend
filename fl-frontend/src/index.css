@@ -37,28 +37,70 @@ video {
   /* background-color: #000000cc; */
 }
 
-.imaginput {
-  display: none;
-}
-
 .home .Button {
   margin-top: 15px;
   align-items: center;
   justify-content: center;
   display: flex;
   font-size: 20px;
+  color: yellow;
 }
 
 .home .Button:hover {
   background-color: azure;
+  color: black;
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 45px;
+}
+
+.imageinfer h1 {
+  margin-top: 50px;
 }
 
 h2 {
   margin-top: 30px;
   font-size: 35px;
   margin-bottom: 30px;
+}
+
+.imageinfer h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imaginput {
+  display: none;
+}
+
+.imageinput .Button {
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  color:yellow
+}
+
+.imageinput .Button:hover {
+  background-color: azure;
+  color: black;
+}
+
+.folder {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: nunito;
+  font-weight: bolder;
+  font-size: 30px;
 }
