@@ -2,13 +2,11 @@ import './App.css';
 import Home from './pages/Home';
 import FedL from './pages/FedL';
 import videoBg from "./dna.mp4";
-import {SocketContext, socket} from './context/socket';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <SocketContext.Provider value={socket}>
-      <BrowserRouter>
+    <BrowserRouter>
       <div>
         <div className="main">
           <div className="overlay"></div>
@@ -22,8 +20,6 @@ function App() {
         </div>
       </div>
     </BrowserRouter>
-    </SocketContext.Provider>
-    
   );
 }
 
