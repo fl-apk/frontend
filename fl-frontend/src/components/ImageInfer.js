@@ -24,7 +24,7 @@ class ImageInfer extends Component {
 
             const response = await axios({
                 method: "post",
-                url: "http://localhost:5000/infer",
+                url: "http://localhost:5003/infer",
                 data: form,
                 headers: {
                     "Content-Type": "multipart/form-data"

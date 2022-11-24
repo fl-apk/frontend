@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/Home';
 import FedL from './pages/FedL';
 import Stats from './pages/Stats';
+import Validation from './pages/Validation';
 import videoBg from "./ambulance.mp4";
 import { SocketContext, socket } from './context/socket';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -19,6 +20,7 @@ function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/fed" element={<FedL />} />
                 <Route exact path="/stats" element={<Stats />} />
+                <Route exact path="/validation" element={<Validation />} />
               </Routes>
             </div>
           </div>
