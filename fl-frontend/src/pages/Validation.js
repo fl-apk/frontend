@@ -1,10 +1,16 @@
-
+import { useState } from "react";
+import Val from "../components/Val";
 
 const Validation = () => {
 
+    const [valFolder, setValFolder] = useState(null)
+
     return (
         <div className="validation">
-            <h1>This is the validation page</h1>
+            <Val
+                valFolder={valFolder}
+                setValFolder={setValFolder}
+            />
         </div>
     )
 }
