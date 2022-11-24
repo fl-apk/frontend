@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Courier New', Courier, monospace
 }
 
 .main {
@@ -84,7 +84,7 @@ h2 {
   justify-content: center;
   display: flex;
   font-size: 20px;
-  color:yellow
+  color: yellow
 }
 
 .imageinput .Button:hover {
@@ -103,4 +103,42 @@ h2 {
   font-family: nunito;
   font-weight: bolder;
   font-size: 30px;
+}
+
+.valData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 60px;
+  margin-top: 100px;
+  height: 250px;
+  box-shadow: 10px 10px rgba(79, 79, 79, 0.4);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  flex-direction: column-reverse;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  font-size: 23px;
+}
+
+.valData h2 {
+  text-align: center;
+  font-family: nunito;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
