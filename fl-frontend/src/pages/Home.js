@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h1>Welcome To Distributed Detection Center</h1>
+            <h1>Welcome To FedHealth</h1>
             <ImageInput
                 setImage={setImage}
             />
