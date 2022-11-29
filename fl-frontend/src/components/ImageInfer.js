@@ -2,6 +2,7 @@ import { useState, useEffect, Component } from "react";
 import axios from "axios";
 import FormData from "form-data";
 import { FcCheckmark, FcCancel, FcSynchronize } from "react-icons/fc";
+import { CirclesWithBar } from "react-loader-spinner";
 
 class ImageInfer extends Component {
 
@@ -39,16 +40,34 @@ class ImageInfer extends Component {
     render() {
         return (
             <div className="imageinfer">
-                {this.state.data === 1 ?
+                {this.state.data == null ?
+                    <div className="loader">
+                        <CirclesWithBar
+                            height="80"
+                            width="80"
+                            radius="9"
+                            color="white"
+                            ariaLabel="loading"
+                            wrapperStyle
+                            wrapperClass
+                        />
+                    </div>
+                    :
+                    null
+                }
+                {this.state.data == 1 ?
                     <>
                         <h1><FcCheckmark /></h1>
                         <h2><FcSynchronize onClick={(e) => this.props.setImage(null)} /></h2>
                     </>
-                    :
+                    : null
+                }
+                {this.state.data == 0 ?
                     <>
                         <h1><FcCancel /></h1>
                         <h2><FcSynchronize onClick={(e) => this.props.setImage(null)} /></h2>
                     </>
+                    : null
                 }
             </div>
         )
